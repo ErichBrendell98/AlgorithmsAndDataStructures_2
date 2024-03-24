@@ -7,6 +7,18 @@ nltk.download('punkt')
 nltk.download('stopwords')
 
 def corpus_preprocessing(text):
+    """
+    Performs pre-processing of the provided corpus.
+
+    This pre-processing includes converting the text to
+    lowercase, the removal of punctuation and special characters, the division of text into words (tokenization) and the removal of stop words.
+
+    Parameters:
+    text (str): The text to be preprocessed.
+
+    Returns:
+    list: A list of tokens after preprocessing.
+    """
     # Convert all text to lowercase
     text = text.lower()
 
