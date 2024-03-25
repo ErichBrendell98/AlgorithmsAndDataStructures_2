@@ -47,18 +47,11 @@ def corpus_preprocessing(text):
     # Convert all text to lowercase
     text = text.lower()
 
-    # Adds unwanted characters to the punctuation string
-    
-    unwanted_characters = "0123456789,.;?\\[\\]{\\}'!@#$%&*()_^:"
-    punctuation = string.punctuation + ''.join(unwanted_characters)
+    # Remove special characters and numbers
+    text = remove_special_characters_and_numbers(text)
 
-    # Remove punctuation and special characters
-    text = text.translate(str.maketrans('', '', punctuation))
-
-    # Splits text into words
+    # Tokenization and removal of stop words
     tokens = word_tokenize(text)
-
-    # Remove stop words
     stop_words = set(stopwords.words('english'))
     tokens = [token for token in tokens if token not in stop_words]
 
