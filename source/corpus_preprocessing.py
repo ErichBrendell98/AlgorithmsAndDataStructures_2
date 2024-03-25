@@ -25,10 +25,17 @@ def corpus_preprocessing(text):
     """
     # Convert all text to lowercase
     text = text.lower()
+
+    # Adds unwanted characters to the punctuation string
+    unwanted_characters = ['”', '–', '“', '’', '‘']
+    punctuation = string.punctuation + ''.join(unwanted_characters)
+
     # Remove punctuation and special characters
-    text = text.translate(str.maketrans('', '', string.punctuation))
+    text = text.translate(str.maketrans('', '', punctuation))
+
     # Splits text into words
     tokens = word_tokenize(text)
+
     # Remove stop words
     stop_words = set(stopwords.words('english'))
     tokens = [token for token in tokens if token not in stop_words]
