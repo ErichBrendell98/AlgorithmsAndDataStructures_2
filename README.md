@@ -25,7 +25,3 @@ This project was carried out by Erich Brendell Araújo Medeiros and Mateus Rodri
 ## Explanatory Video
 
 An explanatory video about the solution and the main results can be found [here](video_link).
-
-## Repository
-
-The project source code can be found [here](repository_link).
