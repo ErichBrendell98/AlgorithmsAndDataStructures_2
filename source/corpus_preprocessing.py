@@ -1,3 +1,4 @@
+import re
 import os
 import string
 
@@ -8,6 +9,26 @@ from nltk.tokenize import word_tokenize
 
 nltk.download('punkt')
 nltk.download('stopwords')
+
+
+def remove_special_characters_and_numbers(text):
+    """
+    Removes special characters and numbers from text.
+
+    This function uses regular expressions to replace all characters
+    that are not uppercase letters, lowercase letters, or whitespace by
+    an empty string, effectively removing them from the text.
+
+    Args:
+        text (str): The text to remove special characters and numbers from.
+
+    Returns:
+        str: The text after removing special characters and numbers.
+    """
+    # Remove special characters and n"umbers
+    text = re.sub('[^A-Za-z\s]', '', text)
+
+    return text
 
 
 def corpus_preprocessing(text):
@@ -27,7 +48,8 @@ def corpus_preprocessing(text):
     text = text.lower()
 
     # Adds unwanted characters to the punctuation string
-    unwanted_characters = ['”', '–', '“', '’', '‘']
+    
+    unwanted_characters = "0123456789,.;?\\[\\]{\\}'!@#$%&*()_^:"
     punctuation = string.punctuation + ''.join(unwanted_characters)
 
     # Remove punctuation and special characters
