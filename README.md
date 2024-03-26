@@ -24,4 +24,4 @@ This project was carried out by Erich Brendell Araújo Medeiros and Mateus Rodri
 
 ## Explanatory Video
 
-An explanatory video about the solution and the main results can be found [here](video_link).
+An explanatory video about the solution and the main results can be found [[here](https://www.loom.com/share/d1f7453139d64e62af01ab28ac758f11?sid=92b91ad4-2933-40d1-8360-c9179d8f3336)https://www.loom.com/share/d1f7453139d64e62af01ab28ac758f11?sid=92b91ad4-2933-40d1-8360-c9179d8f3336](video_link).
