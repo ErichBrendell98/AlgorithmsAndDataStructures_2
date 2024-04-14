@@ -156,3 +156,11 @@ class BST:
 
         fig = go.Figure(data=[node_trace, line_trace], layout=layout)
         fig.show()
+
+
+# Example usage
+if __name__ == "__main__":
+    bst = BST()
+    for value in [5, 3, 1, 0, 2, 4, 7, 6, 8]:
+        bst.add(value)
+    bst.plot()
