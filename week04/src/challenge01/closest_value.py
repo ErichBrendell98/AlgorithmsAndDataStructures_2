@@ -11,21 +11,21 @@ def findClosestValue(tree, target):
 
     Parameters:
     tree (BinarySearchTree): The binary search tree object in which to find the closest value.
-                              It is expected to have a 'root' attribute that points to the root node of the tree.
+                             It is expected to have a 'root' attribute that points to the root node of the tree.
     target (int): The target value for which the closest value in the binary search tree is searched.
 
     Returns:
     int: The value in the binary search tree that is closest to the target value.
     """
     closest = float('inf')
-    currentNode = tree
+    currentNode = tree.root
     while currentNode is not None:
         if abs(target - closest) > abs(target - currentNode.value):
             closest = currentNode.value
         if target < currentNode.value:
-            currentNode = currentNode.left
+            currentNode = currentNode.left_child
         elif target > currentNode.value:
-            currentNode = currentNode.right
+            currentNode = currentNode.right_child 
         else:
             break
     return closest
