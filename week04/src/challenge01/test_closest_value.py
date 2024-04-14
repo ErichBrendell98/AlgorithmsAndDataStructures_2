@@ -1,6 +1,6 @@
 import pytest
 from closest_value import findClosestValue
-from bst import BST, Node
+from bst import BST
 
 
 @pytest.fixture(scope="session")
