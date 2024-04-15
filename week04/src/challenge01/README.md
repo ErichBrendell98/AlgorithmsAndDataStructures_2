@@ -1,12 +1,14 @@
-# README
+# Closest Value in a Binary Search Tree
+
+This repository contains a Python implementation for finding the closest value to a desired target in a binary search tree (BST).
 
 ## Solution Description
 
 This repository contains an implementation of a function that finds the closest value to a target value in a Binary Search Tree (BST). The `findClosestValue` function takes a BST and a target value as input and returns the value in the BST that is closest to the target value.
 
-The function uses a recursive approach to traverse the BST. At each node, it checks whether the absolute difference between the target value and the current node value is less than the absolute difference between the target value and the current closest value. If so, it updates the closest value. Then, depending on whether the target value is less than or greater than the value of the current node, it makes a recursive call to the left or right child of the current node, respectively.
+The function uses a iterative approach to traverse the BST. At each node, it checks whether the absolute difference between the target value and the current node value is less than the absolute difference between the target value and the current closest value. If so, it updates the closest value. Then, depending on whether the target value is less than or greater than the value of the current node, it makes a recursive call to the left or right child of the current node, respectively.
 
-## Instructions for Running the Solution
+## How to run
 
 1. Clone the repository to your local machine.
 2. Navigate to the repository directory in the terminal.
