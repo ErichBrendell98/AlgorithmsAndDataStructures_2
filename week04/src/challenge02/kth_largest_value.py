@@ -18,5 +18,20 @@ def findKthLargestValue(tree, k):
     int: The kth largest integer present in the BST.
     """
 
-    # pass
-    return -1
+    # List to store nodes in reverse order
+    nodes = []
+
+    # Helper function to traverse the tree
+    def reverse_in_order_traversal(node):
+        if node is None or len(nodes) >= k:
+            return
+        reverse_in_order_traversal(node.right_child)
+        if len(nodes) < k:
+            nodes.append(node.value)
+        reverse_in_order_traversal(node.left_child)
+
+    # Start crossing
+    reverse_in_order_traversal(tree.root)
+
+    # Return the kth largest value
+    return nodes[-1] if len(nodes) == k else -1
